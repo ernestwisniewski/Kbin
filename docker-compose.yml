@@ -65,9 +65,17 @@ services:
       - db-data:/var/lib/postgresql/data:rw
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
-###< doctrine/doctrine-bundle ###
     ports:
       - "5433:5432"
+  ###< doctrine/doctrine-bundle ###
+
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    environment:
+      discovery.type: "single-node"
+    ports:
+      - "${ELASTICSEARCH_PORT}:9200"
 
 volumes:
   php_socket:

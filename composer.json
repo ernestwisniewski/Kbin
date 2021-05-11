@@ -17,6 +17,7 @@
         "doctrine/orm": "^2.8",
         "easycorp/easyadmin-bundle": "^3",
         "embed/embed": "dev-master",
+        "friendsofsymfony/elastica-bundle": "^5.2",
         "friendsofsymfony/jsrouting-bundle": "^2.7",
         "karser/karser-recaptcha3-bundle": "^0.1.17",
         "knplabs/knp-time-bundle": "^1.15",
